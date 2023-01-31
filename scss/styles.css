@@ -72,12 +72,21 @@ div {
   opacity: 50%;
 }
 
+/* Footer */
+.footer-div {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 100%;
+}
+
 /* Home page */
 .home-wrapper {
-  height: 80vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1fr, 4fr, 1fr, 4fr);
+  grid-template-rows: 1fr, 4fr, 1fr, 4fr;
 }
 
 .critter-card {
@@ -125,13 +134,63 @@ div {
   grid-row: 4/5;
 }
 
-/* Footer */
-.footer-div {
+/* Shop page */
+.shop-wrapper {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+.shop-wrapper h4 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.outfits {
+  display: grid;
+  grid-row: 1/2;
+  grid-template-rows: 1fr, 4fr;
+}
+.outfits-title {
   display: flex;
+  grid-row: 1/2;
+  justify-content: center;
   text-align: center;
   align-items: center;
+}
+.outfits-card-group {
+  display: flex;
+  grid-row: 2/3;
+  justify-content: space-around;
+  align-items: center;
+}
+.outfits-card {
+  height: 300px;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.backgrounds {
+  display: grid;
+  grid-row: 2/3;
+  grid-template-rows: 1fr, 4fr;
+}
+.backgrounds-title {
+  display: flex;
+  grid-row: 1/2;
   justify-content: center;
-  height: 10vh;
-  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+.backgrounds-card-group {
+  display: flex;
+  grid-row: 2/3;
+  justify-content: space-around;
+  align-items: center;
+}
+.backgrounds-card {
+  height: 300px;
+  width: 300px;
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=styles.css.map */
