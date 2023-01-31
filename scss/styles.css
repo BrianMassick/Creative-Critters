@@ -193,4 +193,22 @@ div {
   margin: 0;
   padding: 0;
 }
+
+/* Games page */
+.games-wrapper {
+  display: grid;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: right;
+}
+.games-card {
+  display: grid;
+  justify-self: center;
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+}
 /*# sourceMappingURL=styles.css.map */

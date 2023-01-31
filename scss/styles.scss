@@ -206,3 +206,22 @@ div {
         padding: 0;
     }
 }
+
+/* Games page */
+.games-wrapper {
+    display: grid;
+}
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: right;
+
+    &-card {
+        display: grid;
+        justify-self: center;
+        height: 300px;
+        width: 300px;
+        margin: 20px;
+    }
+}
