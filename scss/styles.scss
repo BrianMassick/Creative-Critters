@@ -1,3 +1,11 @@
+/* Colour Palette
+Orchid        - #DFA4CF
+Sandy-Brown   - #EC9D60
+Orange-Yellow - #F0CB66
+Yellow-Green  - #8ACE55
+Maximum-Blue  - #49B0D5
+*/
+
 /* Global styles */
 html {
     box-sizing: border-box;
@@ -107,6 +115,7 @@ a {
 }
 
 .critter-card {
+    border: 2px solid black;
     position: relative;
     top: 0;
     left: 0;
