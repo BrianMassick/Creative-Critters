@@ -8,5 +8,11 @@ export const WORDS = [
     'laugh',
     'under',
     'group',
-    'chair'
+    'chair',
+    'smile',
+    'happy',
+    'panda',
+    'snake',
+    'skunk',
+    'mouse'
 ]
