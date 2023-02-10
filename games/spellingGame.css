@@ -12,8 +12,9 @@ h1 {
 .word-image {
     border: 2px solid black;
     height: 15rem;
-    width: 15rem;
+    width: 25rem;
     background-position: center;
+    margin-bottom: 0.5rem;
 }
 
 #game-board {

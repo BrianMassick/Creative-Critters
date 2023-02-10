@@ -3,10 +3,7 @@ export const WORDS = [
     'shirt',
     'pants',
     'glove',
-    'great',
-    'funny',
     'laugh',
-    'under',
     'group',
     'chair',
     'smile',
@@ -14,5 +11,9 @@ export const WORDS = [
     'panda',
     'snake',
     'skunk',
-    'mouse'
+    'mouse',
+    'horse',
+    'moose',
+    'bunny',
+    'river'
 ]
