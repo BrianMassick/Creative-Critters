@@ -3,6 +3,19 @@ h1 {
     text-align: center;
 }
 
+.image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.word-image {
+    border: 2px solid black;
+    height: 15rem;
+    width: 15rem;
+    background-position: center;
+}
+
 #game-board {
   display: flex;
   align-items: center;

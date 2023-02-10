@@ -11,6 +11,12 @@ let nextLetter = 0;
 let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
 console.log(rightGuessString);
 
+// Function finds matching image for word
+function setImage() {
+    let image = document.getElementsByClassName("word-image")[0];
+    image.style.backgroundImage = `url('./wordImages/${rightGuessString}.jpg')`;
+}
+
 // Creates guess board
 function initBoard() {
     let board = document.getElementById("game-board");
@@ -213,4 +219,5 @@ function restart() {
     location.reload();
 }
 
+setImage();
 initBoard();
