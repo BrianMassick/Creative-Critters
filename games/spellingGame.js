@@ -1,4 +1,6 @@
 // Code is assisted by a tutorial on freeCodeCamp found here https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/
+// toastr is a JavaScript library that uses non-blocking notifications.
+// CSS library Animate.css has nice board animations for a wordle type game.
 
 import { WORDS } from "./words.js";
 
@@ -14,16 +16,16 @@ function initBoard() {
     let board = document.getElementById("game-board");
 
     for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
-        let row = document.createElement("div")
-        row.className = "letter-row"
+        let row = document.createElement("div");
+        row.className = "letter-row";
         
         for (let j = 0; j < 5; j++) {
-            let box = document.createElement("div")
-            box.className = "letter-box"
-            row.appendChild(box)
+            let box = document.createElement("div");
+            box.className = "letter-box";
+            row.appendChild(box);
         }
 
-        board.appendChild(row)
+        board.appendChild(row);
     }
 }
 
@@ -64,7 +66,11 @@ document.getElementById("keyboard-cont").addEventListener("click", (e) => {
 
     if (key === "Del") {
         key = "Backspace"
-    } 
+    }
+
+    if (key === "New Game") {
+        restart();
+    }
 
     document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))
 });
@@ -201,5 +207,10 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
 });
+
+// Function for starting a new round
+function restart() {
+    location.reload();
+}
 
 initBoard();
