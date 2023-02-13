@@ -31,6 +31,13 @@ a {
     text-decoration: none;
 }
 
+.page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 /* Navigation */
 #cCLogo {
     margin: 0;
@@ -216,13 +223,18 @@ a {
 }
 
 /* Footer */
+
+.footer {
+    margin-top: auto;
+}
+
 .footer-div {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
     height: 10vh;
-    width: 100vw;
+    width: 100%;
     background-color: #DFA4CF;
 }
 
