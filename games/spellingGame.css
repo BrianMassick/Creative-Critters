@@ -4,8 +4,8 @@ h1 {
 }
 
 .game-wrapper {
-  width: 35rem;
   display: flex;
+  padding: 10px;
   flex-direction: column;
   align-self: center;
   background-color: white;
@@ -21,9 +21,10 @@ h1 {
 .word-image {
     border: 2px solid black;
     height: 15rem;
-    width: 25rem;
+    width: 100%;
     background-position: center;
     margin-bottom: 0.5rem;
+    border-radius: 5px 5px;
 }
 
 #game-board {
