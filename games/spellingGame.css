@@ -3,6 +3,15 @@ h1 {
     text-align: center;
 }
 
+.game-wrapper {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-color: white;
+  border-radius: 7rem 7rem;
+}
+
 .image-wrap {
     display: flex;
     align-items: center;

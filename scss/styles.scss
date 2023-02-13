@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    background-color: #49B0D5;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -40,7 +41,7 @@ a {
 }
 
 .navigation {
-    background-color: teal;
+    background-color: #EC9D60;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -49,7 +50,8 @@ a {
     position: sticky;
     top: 0;
     height: 10vh;
-    padding: 1em;
+    width: 100vw;
+    padding: 1em 0;
     z-index: 1;
 }
 
@@ -62,7 +64,7 @@ a {
 
     & li {
         font-size: 1.5rem;
-        background-color: aqua;
+        background-color: #8ACE55;
         border-radius: 15px 15px;
     }
 
@@ -81,7 +83,7 @@ a {
     }
 
     & li:hover {
-        opacity: 50%;
+        opacity: 70%;
     }
 }
 
@@ -92,7 +94,7 @@ a {
     align-items: center;
     justify-content: center;
     height: 10vh;
-    width: 100%;
+    width: 100vw;
     background-color: #DFA4CF;
 }
 
