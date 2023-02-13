@@ -537,11 +537,18 @@ a {
     grid-template-columns: repeat(3, 1fr);
     justify-content: right;
 
+    @media screen and (max-width: 1400px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+    }
+
     &-card {
         display: grid;
         justify-self: center;
-        height: 300px;
-        width: 300px;
         margin: 20px;
     }
 }
