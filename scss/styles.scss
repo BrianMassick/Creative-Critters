@@ -261,14 +261,14 @@ a {
     }
 }
 .critter-background {
-    position: relative;
-    top: 0;
-    left: 0;
+    background-color: blue;
 }
 .critter-character {
     position: absolute;
     top: 0;
     left: 0;
+    width: auto;
+    height: auto;
 }
 
 /* Home page */
