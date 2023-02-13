@@ -59,7 +59,7 @@ a {
   position: sticky;
   top: 0;
   height: 75px;
-  width: 100vw;
+  width: 100%;
   padding: 1em 0;
   z-index: 99;
 }
@@ -297,6 +297,7 @@ a {
   width: 80%;
   height: 50%;
   font-size: 4rem;
+  border: 1px solid #000;
 }
 @media screen and (max-width: 1000px) {
   .feature-title-games {
@@ -309,7 +310,7 @@ a {
   align-items: center;
   margin: 10px 0;
   padding: 0;
-  background-color: beige;
+  background-color: #DFA4CF;
   grid-row: 3/4;
   grid-column: 1/-1;
   align-self: center;
@@ -318,6 +319,7 @@ a {
   width: 80%;
   height: 50%;
   font-size: 4rem;
+  border: 1px solid #000;
 }
 @media screen and (max-width: 1000px) {
   .feature-title-items {
@@ -376,6 +378,19 @@ a {
 @media screen and (max-width: 1000px) {
   .game-preview-text {
     font-size: 1rem;
+  }
+}
+.game-preview-button {
+  background-color: #8ACE55;
+  border-radius: 5px 5px;
+  font-size: 2rem;
+  width: 50%;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 1000px) {
+  .game-preview-button {
+    font-size: 1.5rem;
   }
 }
 
