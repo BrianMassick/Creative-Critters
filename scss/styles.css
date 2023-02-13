@@ -298,6 +298,23 @@ a {
   grid-row: 2/3;
 }
 
+.game-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid #000;
+  margin: 0 5px;
+}
+.game-preview-image {
+  background-image: url("/images/spellingGameSnippet.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #000;
+  height: 70%;
+  width: 75%;
+}
+
 .featured-items {
   background-color: aquamarine;
   display: grid;
