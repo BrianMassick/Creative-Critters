@@ -1,14 +1,30 @@
 // This file will be used across all pages of the site
-
-let coinAmount = window.localStorage.getItem('coins');
-let currentCritter = window.localStorage.getItem('critter');
-let currentOutfit = window.localStorage.getItem('outfit');
-let currentBackground = window.localStorage.getItem('background');
+let coinAmount;
+let currentCritter;
+let currentOutfit;
+let currentBackground;
 
 let coinDisplay = document.getElementById('coin-bag');
 //let critterDisplay = document.getElementById('critter-character');
 let critterOutfit = document.getElementsByClassName('cls-main');
 let backgroundDisplay = document.getElementById('critter-background');
+
+// function to set local storage values
+function setLocalStorage() {
+    window.localStorage.setItem('coins', coinAmount);
+    window.localStorage.setItem('critter', currentCritter);
+    window.localStorage.setItem('outfit', currentOutfit);
+    window.localStorage.setItem('background', currentBackground);
+    setPlayerItems();
+}
+
+// function to get local storage values
+function getLocalStorage() {
+    coinAmount = window.localStorage.getItem('coins');
+    currentCritter = window.localStorage.getItem('critter');
+    currentOutfit = window.localStorage.getItem('outfit');
+    currentBackground = window.localStorage.getItem('background');
+}
 
 // function will assign the items from local storage to their respective locations
 function setPlayerItems() {
@@ -19,6 +35,14 @@ function setPlayerItems() {
 }
 
 // function will be called when any purchase button is clicked
+function makePurchase(idName, itemType) {
+    let theItem = document.getElementById(`${idName}`);
+    let newItem = getComputedStyle(theItem);
+    if (itemType == 'outfit') {
 
+    } else if (itemType == 'background') {
 
-setPlayerItems();
+    } else {
+
+    }
+}

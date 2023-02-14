@@ -434,7 +434,6 @@ a {
     }
 
     &-image {
-        background-color: purple;
         border: 1px solid #000;
         min-height: 200px;
         height: 70%;
@@ -463,6 +462,17 @@ a {
             font-size: 1.5rem;
         }
     }
+}
+
+// These wont be hardcoded colours forever
+#item-1 {
+    background-color: purple;
+}
+#item-2 {
+    background-color: red;
+}
+#item-3 {
+    background-color: aqua;
 }
 
 /* Shop page */
@@ -536,19 +546,19 @@ a {
 
 // Following are for outfits
 // These will end up being different svg's instead of hardcoded different colours
-.cls-2 {
+#cls-2 {
     fill: purple;
 }
-.cls-3 {
+#cls-3 {
     fill: red;
 }
-.cls-4 {
+#cls-4 {
     fill: chocolate;
 }
-.cls-5 {
+#cls-5 {
     fill: darkolivegreen;
 }
-.cls-6 {
+#cls-6 {
     fill: gold;
 }
 
@@ -557,19 +567,19 @@ a {
 .background-image {
     background-color: #000;
 }
-.background-image-1 {
+#background-image-1 {
     background-color: purple;
 }
-.background-image-2 {
+#background-image-2 {
     background-color: red;
 }
-.background-image-3 {
+#background-image-3 {
     background-color: chocolate;
 }
-.background-image-4 {
+#background-image-4 {
     background-color: darkolivegreen;
 }
-.background-image-5 {
+#background-image-5 {
     background-color: gold;
 }
 
