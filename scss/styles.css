@@ -484,6 +484,12 @@ a {
   overflow-x: auto;
   overscroll-behavior-inline: contain;
 }
+@media screen and (max-width: 1300px) {
+  .media-scroller {
+    grid-auto-flow: row;
+    grid-auto-columns: 70vw;
+  }
+}
 
 .outfit-display {
   display: grid;
@@ -496,6 +502,15 @@ a {
 
 .outfit-display > svg {
   inline-size: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.outfit-display > section {
+  justify-self: center;
+  inline-size: 90%;
+  margin: 3px;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
@@ -537,6 +552,30 @@ a {
 
 .cls-6 {
   fill: gold;
+}
+
+.background-image {
+  background-color: #000;
+}
+
+.background-image-1 {
+  background-color: purple;
+}
+
+.background-image-2 {
+  background-color: red;
+}
+
+.background-image-3 {
+  background-color: chocolate;
+}
+
+.background-image-4 {
+  background-color: darkolivegreen;
+}
+
+.background-image-5 {
+  background-color: gold;
 }
 
 /* Games page */
