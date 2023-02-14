@@ -545,6 +545,10 @@ a {
   margin-bottom: 5px;
 }
 
+#test {
+  fill: purple;
+}
+
 #cls-2 {
   fill: purple;
 }
