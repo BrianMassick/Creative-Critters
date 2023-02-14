@@ -464,7 +464,17 @@ a {
 
 /* Shop page */
 .shop-wrapper {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
+}
+
+.outfits-title {
+  border: 1px solid #000;
+  background-color: #F0CB66;
+  border-radius: 5px 5px;
+  width: 50%;
 }
 
 .media-scroller {
@@ -507,6 +517,26 @@ a {
   width: 50%;
   cursor: pointer;
   margin-bottom: 5px;
+}
+
+.cls-2 {
+  fill: purple;
+}
+
+.cls-3 {
+  fill: red;
+}
+
+.cls-4 {
+  fill: chocolate;
+}
+
+.cls-5 {
+  fill: darkolivegreen;
+}
+
+.cls-6 {
+  fill: gold;
 }
 
 /* Games page */
