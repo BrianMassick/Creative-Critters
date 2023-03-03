@@ -232,6 +232,8 @@ a {
   left: 0;
   grid-column: 1/2;
   grid-row: 1/3;
+  margin-top: 50px;
+  margin-bottom: 5px;
 }
 .critter-card h2 {
   font-size: 2rem;
@@ -242,6 +244,7 @@ a {
   .critter-card {
     grid-column: 1/-1;
     grid-row: 1/2;
+    margin-top: 5px;
   }
 }
 
