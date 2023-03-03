@@ -234,6 +234,7 @@ a {
   grid-row: 1/3;
   margin-top: 50px;
   margin-bottom: 5px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .critter-card h2 {
   font-size: 2rem;
@@ -249,7 +250,8 @@ a {
 }
 
 #critter-background {
-  background-color: blue;
+  background-image: url("../images/hillBackground.jpg");
+  background-size: cover;
 }
 
 .critter-character {
@@ -269,6 +271,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 3fr 1fr 3fr;
+  background-color: #49B0D5;
 }
 @media screen and (max-width: 1000px) {
   .home-wrapper {
@@ -293,6 +296,7 @@ a {
   height: 50%;
   font-size: 4rem;
   border: 1px solid #000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 @media screen and (max-width: 1000px) {
   .feature-title-games {
@@ -315,6 +319,7 @@ a {
   height: 50%;
   font-size: 4rem;
   border: 1px solid #000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 @media screen and (max-width: 1000px) {
   .feature-title-items {
@@ -344,6 +349,7 @@ a {
   align-items: center;
   border: 2px solid #000;
   margin: 5px 5px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .game-preview-title {
   font-size: 3rem;
@@ -410,7 +416,8 @@ a {
   justify-content: center;
   align-items: center;
   border: 2px solid #000;
-  margin: 5px 5px;
+  margin: 5px 5px 25px 5px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .item-preview-title {
   font-size: 3rem;
