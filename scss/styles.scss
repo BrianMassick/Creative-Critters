@@ -220,6 +220,17 @@ a {
     }
 }
 
+.coin-count {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#coin-bag {
+    margin: 5px;
+}
+
 /* Footer */
 
 .footer {
