@@ -161,7 +161,8 @@ function checkGuess () {
     }
 
     if (guessString === rightGuessString) {
-        toastr.success("You guessed right! Game over!");
+        toastr.success("You guessed right! You earned 20 coins!");
+        coinWinnings(20);
         guessesRemaining = 0;
         return;
     } else {

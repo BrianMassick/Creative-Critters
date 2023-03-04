@@ -21,29 +21,35 @@ if (newUser) {
 
 // function to set local storage values
 function setLocalStorage() {
+    if (document.URL.includes("index.html")) {
+        window.localStorage.setItem('critter', currentCritter);
+        window.localStorage.setItem('outfit', currentOutfit);
+        window.localStorage.setItem('background', currentBackground);
+    } else {}
     window.localStorage.setItem('visit', 'returning');
     window.localStorage.setItem('coins', coinAmount);
-    window.localStorage.setItem('critter', currentCritter);
-    window.localStorage.setItem('outfit', currentOutfit);
-    window.localStorage.setItem('background', currentBackground);
     setPlayerItems();
 }
 
 // function to get local storage values
 function getLocalStorage() {
+    if (document.URL.includes("index.html")) {
+        currentCritter = window.localStorage.getItem('critter');
+        currentOutfit = window.localStorage.getItem('outfit');
+        currentBackground = window.localStorage.getItem('background');
+    } else {}
     coinAmount = window.localStorage.getItem('coins');
-    currentCritter = window.localStorage.getItem('critter');
-    currentOutfit = window.localStorage.getItem('outfit');
-    currentBackground = window.localStorage.getItem('background');
     setPlayerItems();
 }
 
 // function will assign the items from local storage to their respective locations
 function setPlayerItems() {
+    if (document.URL.includes("index.html")) {
+        critterOutfit[0].style.fill = currentOutfit;
+        critterOutfit[1].style.fill = currentOutfit;
+        backgroundDisplay.style.backgroundColor = currentBackground;
+    } else {}
     coinDisplay.innerHTML = `${coinAmount}`;
-    critterOutfit[0].style.fill = currentOutfit;
-    critterOutfit[1].style.fill = currentOutfit;
-    backgroundDisplay.style.backgroundColor = currentBackground;
 }
 
 // function will be called when any purchase button is clicked
@@ -57,4 +63,11 @@ function makePurchase(idName, itemType) {
     } else {
 
     }
+}
+
+// Handles earning of coins
+function coinWinnings(amount) {
+    coinAmount = parseInt(coinAmount) + amount;
+    window.localStorage.setItem('coins', coinAmount);
+    coinDisplay.innerHTML = `${coinAmount}`;
 }
