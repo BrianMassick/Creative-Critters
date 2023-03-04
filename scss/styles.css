@@ -513,7 +513,38 @@ a {
   grid-auto-columns: 21%;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.media-scroller::-webkit-scrollbar {
+  margin-top: 20px;
+}
+.media-scroller::-webkit-scrollbar-track {
+  background-color: #EC9D60;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.media-scroller::-webkit-scrollbar-thumb {
+  background: #DFA4CF;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1500px) {
+  .media-scroller {
+    grid-auto-columns: 28%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .media-scroller {
+    grid-auto-columns: 35%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .media-scroller {
+    grid-auto-columns: 42%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .media-scroller {
+    grid-auto-columns: 63%;
+  }
 }
 
 .outfit-display {
