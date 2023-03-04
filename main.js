@@ -16,7 +16,11 @@ let item2 = document.getElementById('b-2');
 let item3 = document.getElementById('b-3');
 
 // Event listeners for buttons
-item1.addEventListener('click', function() { makePurchase('item-1', 'background') });
+if (document.URL.includes("index.html")) {
+    item1.addEventListener('click', function() { makePurchase('item-1', 'background') });
+    item2.addEventListener('click', function() { makePurchase('item-2', 'background') });
+    item3.addEventListener('click', function() { makePurchase('item-3', 'background') });
+}
 
 //Is this a new user
 const newUser = localStorage.getItem('visit') == null;

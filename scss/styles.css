@@ -265,7 +265,7 @@ a {
 }
 
 #critter-background {
-  background-image: url("../images/hillBackground.jpg");
+  background-image: url(../backgrounds/hillBackground.jpg);
   background-size: cover;
 }
 
@@ -479,15 +479,18 @@ a {
 }
 
 #item-1 {
-  background-image: url(../images/forestBackground.jpg);
+  background-image: url(../backgrounds/forestBackground.jpg);
+  background-position: center;
 }
 
 #item-2 {
-  background-color: red;
+  background-image: url(../backgrounds/hillBackground.jpg);
+  background-position: center;
 }
 
 #item-3 {
   background-color: aqua;
+  background-position: center;
 }
 
 /* Shop page */
