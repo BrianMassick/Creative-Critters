@@ -10,6 +10,14 @@ let coinDisplay = document.getElementById('coin-bag');
 let critterOutfit = document.getElementsByClassName('cls-main');
 let backgroundDisplay = document.getElementById('critter-background');
 
+// Featured item buttons
+let item1 = document.getElementById('b-1');
+let item2 = document.getElementById('b-2');
+let item3 = document.getElementById('b-3');
+
+// Event listeners for buttons
+item1.addEventListener('click', function() { makePurchase('item-1', 'background') });
+
 //Is this a new user
 const newUser = localStorage.getItem('visit') == null;
 if (newUser) {
@@ -47,7 +55,7 @@ function setPlayerItems() {
     if (document.URL.includes("index.html")) {
         critterOutfit[0].style.fill = currentOutfit;
         critterOutfit[1].style.fill = currentOutfit;
-        backgroundDisplay.style.backgroundColor = currentBackground;
+        backgroundDisplay.style.backgroundImage = currentBackground;
     } else {}
     coinDisplay.innerHTML = `${coinAmount}`;
 }
@@ -55,14 +63,17 @@ function setPlayerItems() {
 // function will be called when any purchase button is clicked
 function makePurchase(idName, itemType) {
     let theItem = document.getElementById(`${idName}`);
-    let newItem = getComputedStyle(theItem);
+    let newItem = window.getComputedStyle(theItem);
+    if (coinAmount < 100) { alert('Not enough coins!'); return; }
+    console.log(newItem);
     if (itemType == 'outfit') {
 
     } else if (itemType == 'background') {
-
-    } else {
-
+        theItem.style.backgroundImage = newItem.getPropertyValue('background-image');
+        setCritterBackground(theItem);
     }
+
+    coinSpent(100);
 }
 
 // Handles earning of coins
@@ -70,4 +81,20 @@ function coinWinnings(amount) {
     coinAmount = parseInt(coinAmount) + amount;
     window.localStorage.setItem('coins', coinAmount);
     coinDisplay.innerHTML = `${coinAmount}`;
+}
+
+// Handles spending coins
+function coinSpent(amount) {
+    coinAmount = parseInt(coinAmount) - amount;
+    window.localStorage.setItem('coins', coinAmount);
+    coinDisplay.innerHTML = `${coinAmount}`;
+}
+
+// Handles setting of critter backgrounds
+function setCritterBackground(background) {
+    currentBackground = background.style.backgroundImage;
+    window.localStorage.setItem('background', currentBackground);
+    if (document.URL.includes("index.html")) {
+        backgroundDisplay.style.backgroundImage = currentBackground;
+    }
 }
