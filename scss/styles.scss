@@ -280,16 +280,15 @@ a {
     background-size: cover;
 }
 
-.critter-character {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-}
-
-.cls-1 {
-    fill: #000;
+#critter-character {
+    background-image: url(../outfits/fox-cute.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50%;
+    width: 400px;
+    height: 600px;
+    border: none;
 }
 
 /* Home page */

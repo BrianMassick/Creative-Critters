@@ -6,8 +6,7 @@ let currentOutfit;
 let currentBackground;
 
 let coinDisplay = document.getElementById('coin-bag');
-//let critterDisplay = document.getElementById('critter-character');
-let critterOutfit = document.getElementsByClassName('cls-main');
+let critterOutfit = document.getElementById('critter-character');
 let backgroundDisplay = document.getElementById('critter-background');
 
 // Featured item buttons
@@ -57,8 +56,7 @@ function getLocalStorage() {
 // function will assign the items from local storage to their respective locations
 function setPlayerItems() {
     if (document.URL.includes("index.html")) {
-        critterOutfit[0].style.fill = currentOutfit;
-        critterOutfit[1].style.fill = currentOutfit;
+        critterOutfit.style.backgroundImage = currentOutfit;
         backgroundDisplay.style.backgroundImage = currentBackground;
     } else {}
     coinDisplay.innerHTML = `${coinAmount}`;
@@ -102,4 +100,9 @@ function setCritterBackground(background) {
     if (document.URL.includes("index.html")) {
         backgroundDisplay.style.backgroundImage = currentBackground;
     }
+}
+
+// Handles setting of critter outfit
+function setCritterOutfit(outfit) {
+    currentOutfit = outfit.style.src
 }
