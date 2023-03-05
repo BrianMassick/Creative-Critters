@@ -24,7 +24,7 @@ if (document.URL.includes("index.html")) {
 //Is this a new user
 const newUser = localStorage.getItem('visit') == null;
 if (newUser) {
-    coinAmount = 100;
+    coinAmount = 1000;
     setLocalStorage();
 } else {
     getLocalStorage();

@@ -590,50 +590,6 @@ a {
   font-weight: 600;
 }
 
-#cls-2 {
-  fill: purple;
-}
-
-#cls-3 {
-  fill: red;
-}
-
-#cls-4 {
-  fill: chocolate;
-}
-
-#cls-5 {
-  fill: darkolivegreen;
-}
-
-#cls-6 {
-  fill: gold;
-}
-
-.background-image {
-  background-color: #000;
-}
-
-#background-image-1 {
-  background-color: purple;
-}
-
-#background-image-2 {
-  background-color: red;
-}
-
-#background-image-3 {
-  background-color: chocolate;
-}
-
-#background-image-4 {
-  background-color: darkolivegreen;
-}
-
-#background-image-5 {
-  background-color: gold;
-}
-
 /* Games page */
 .games-wrapper {
   display: grid;

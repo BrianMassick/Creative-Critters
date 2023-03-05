@@ -23,9 +23,11 @@ function backgroundShowcase() {
         section.style.backgroundPosition = 'center';
         img.src = './images/Coin.png';
 
-        button.onclick = function() {
-            makePurchase(section.id, 'background');
-        }
+        button.onclick = function(i) {
+            return function() {
+                makePurchase(`background-image-${i}`, 'background');
+            };
+        }(i);
 
         button.appendChild(img);
         button.insertAdjacentHTML('beforeend', '100');
@@ -51,13 +53,15 @@ function outfitShowcase() {
         section.id = `outfit-image-${i}`;
         button.className = 'outfit-button';
 
+        button.onclick = function(i) {
+            return function() {
+                makePurchase(`outfit-image-${i}`, 'outfit');
+            };
+        }(i);
+
         section.style.backgroundImage = `url("http://127.0.0.1:5500/outfits/${OUTFITS[i]}.png")`;
         section.style.backgroundPosition = 'center';
         img.src = './images/Coin.png';
-
-        button.onclick = function() {
-            makePurchase(section.id, 'outfit');
-        }
 
         button.appendChild(img);
         button.insertAdjacentHTML('beforeend', '100');
@@ -65,6 +69,7 @@ function outfitShowcase() {
         div.appendChild(button);
         outfitShowcaseDisplay.appendChild(div);
         ++i;
+        console.log(section.style.backgroundImage);
     }
 }
 
