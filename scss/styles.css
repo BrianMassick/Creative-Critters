@@ -270,7 +270,7 @@ a {
 }
 
 #critter-character {
-  background-image: url(../outfits/fox-cute.png);
+  background-image: url(../outfits/bunny-basic.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -488,7 +488,7 @@ a {
 }
 
 #item-3 {
-  background-color: aqua;
+  background-image: url(../outfits/bunny-cute.png);
   background-position: center;
 }
 
