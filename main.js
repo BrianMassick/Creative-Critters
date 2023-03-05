@@ -18,7 +18,7 @@ let item3 = document.getElementById('b-3');
 if (document.URL.includes("index.html")) {
     item1.addEventListener('click', function() { makePurchase('item-1', 'background') });
     item2.addEventListener('click', function() { makePurchase('item-2', 'background') });
-    item3.addEventListener('click', function() { makePurchase('item-3', 'background') });
+    item3.addEventListener('click', function() { makePurchase('item-3', 'outfit') });
 }
 
 //Is this a new user
@@ -69,7 +69,8 @@ function makePurchase(idName, itemType) {
     if (coinAmount < 100) { alert('Not enough coins!'); return; }
     console.log(newItem);
     if (itemType == 'outfit') {
-
+        theItem.style.backgroundImage = newItem.getPropertyValue('background-image');
+        setCritterOutfit(theItem);
     } else if (itemType == 'background') {
         theItem.style.backgroundImage = newItem.getPropertyValue('background-image');
         setCritterBackground(theItem);
@@ -104,5 +105,9 @@ function setCritterBackground(background) {
 
 // Handles setting of critter outfit
 function setCritterOutfit(outfit) {
-    currentOutfit = outfit.style.src
+    currentOutfit = outfit.style.backgroundImage;
+    window.localStorage.setItem('outfit', currentOutfit);
+    if (document.URL.includes("index.html")) {
+        critterOutfit.style.backgroundImage = currentOutfit;
+    }
 }

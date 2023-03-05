@@ -1,13 +1,13 @@
 import { BACKGROUNDS } from './itemBank/backgrounds.js';
+import { OUTFITS } from './itemBank/outfits.js';
 
+let outfitShowcaseDisplay = document.getElementById('outfit-showcase');
 let backgroundShowcaseDisplay = document.getElementById('background-showcase');
 
 // function creates background showcase
 function backgroundShowcase() {
     var showcaseSize = BACKGROUNDS.length;
     let i = 0;
-
-    console.log(showcaseSize);
 
     while (i < showcaseSize) {
         var div = document.createElement('div');
@@ -36,4 +36,37 @@ function backgroundShowcase() {
     }
 }
 
+// function creates outfit showcase
+function outfitShowcase() {
+    var showcaseSize = OUTFITS.length;
+    let i = 0;
+
+    while (i < showcaseSize) {
+        var div = document.createElement('div');
+        var section = document.createElement('section');
+        var button = document.createElement('button');
+        var img = document.createElement('img');
+
+        div.className = 'outfit-display';
+        section.id = `outfit-image-${i}`;
+        button.className = 'outfit-button';
+
+        section.style.backgroundImage = `url("http://127.0.0.1:5500/outfits/${OUTFITS[i]}.png")`;
+        section.style.backgroundPosition = 'center';
+        img.src = './images/Coin.png';
+
+        button.onclick = function() {
+            makePurchase(section.id, 'outfit');
+        }
+
+        button.appendChild(img);
+        button.insertAdjacentHTML('beforeend', '100');
+        div.appendChild(section);
+        div.appendChild(button);
+        outfitShowcaseDisplay.appendChild(div);
+        ++i;
+    }
+}
+
+outfitShowcase();
 backgroundShowcase();
