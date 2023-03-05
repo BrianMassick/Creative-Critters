@@ -15,7 +15,7 @@ let item1 = document.getElementById('b-1');
 let item2 = document.getElementById('b-2');
 let item3 = document.getElementById('b-3');
 
-// Event listeners for buttons
+// Event listeners for buttons in featured items (homepage)
 if (document.URL.includes("index.html")) {
     item1.addEventListener('click', function() { makePurchase('item-1', 'background') });
     item2.addEventListener('click', function() { makePurchase('item-2', 'background') });
@@ -77,6 +77,7 @@ function makePurchase(idName, itemType) {
         setCritterBackground(theItem);
     }
 
+    alert('Thanks for your purchase!');
     coinSpent(100);
 }
 
