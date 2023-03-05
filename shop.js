@@ -1,4 +1,4 @@
-import { BACKGROUNDS } from './backgrounds.js';
+import { BACKGROUNDS } from './itemBank/backgrounds.js';
 
 let backgroundShowcaseDisplay = document.getElementById('background-showcase');
 
