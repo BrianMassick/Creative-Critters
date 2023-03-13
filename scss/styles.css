@@ -229,12 +229,16 @@ a {
 
 .footer-div {
   display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  height: 10vh;
+  align-items: flex-end;
+  justify-content: left;
+  height: auto;
   width: 100%;
   background-color: #DFA4CF;
+}
+
+.copyright-text {
+  padding-left: 25px;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.1);
 }
 
 /* Critter Card */

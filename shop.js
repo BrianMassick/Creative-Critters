@@ -69,7 +69,6 @@ function outfitShowcase() {
         div.appendChild(button);
         outfitShowcaseDisplay.appendChild(div);
         ++i;
-        console.log(section.style.backgroundImage);
     }
 }
 
