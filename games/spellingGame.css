@@ -1,5 +1,6 @@
 /* Code is assisted by a tutorial on freeCodeCamp found here https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/ */
 h1 {
+  font-size: 3rem;
     text-align: center;
 }
 
@@ -10,7 +11,7 @@ h1 {
   flex-direction: column;
   align-self: center;
   background-color: white;
-  border-radius: 6rem 6rem;
+  border-radius: 4rem 4rem;
 }
 
 .image-wrap {
@@ -40,8 +41,8 @@ h1 {
   margin: 2px;
   font-size: 2.5rem;
   font-weight: 700;
-  height: 3rem;
-  width: 3rem;
+  height: 4rem;
+  width: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,10 +77,16 @@ h1 {
 }
 
 .keyboard-button {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 700;
-  padding: 0.5rem;
-  margin: 0 2px;
+  padding: 0.7rem;
+  margin: 0 4px;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 700px) {
+  .keyboard-button{
+    font-size: 1rem;
+  }
 }
