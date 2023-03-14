@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    background-color: #ebebeb;
+    background-image: url(../images/background_texture.png);
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -44,19 +44,21 @@ a {
 #cCLogo {
     margin: 0;
     padding: 0;
-    background-image: url(../images/testerLogo.svg);
+    background-image: url(../images/newCCLogo.svg);
     background-repeat: no-repeat;
     background-position: center;
-    height: 150px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
 
 .navigation {
-    background-color: #F88136;
+    //background-color: #F88136;
+    background-image: url(../images/background_texture.png);
+    border-bottom: 10px solid #F88136;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -72,10 +74,9 @@ a {
     list-style-type: none;
     justify-content: center;
     align-items: center;
-    padding: 10px;
 
     & li {
-        font-size: 1.5rem;
+        font-size: 2rem;
         background-color: #8ACE55;
         border-radius: 15px 15px;
     }
@@ -83,8 +84,8 @@ a {
     & > li {
         vertical-align: center;
         text-align: center;
-        padding: 5px;
-        margin: 0 1rem;
+        padding: 5px 10px;
+        margin: 0.5rem;
         overflow: hidden;
     }
 
@@ -300,7 +301,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 3fr 1fr 3fr;
-    background-color: #ebebeb;
+    background-image: url(../images/background_texture.png);
 
     @media screen and (max-width: 1000px) {
         display: flex;
