@@ -520,11 +520,10 @@ a {
 }
 
 .outfits-title {
-    border: 1px solid #000;
-    background-color: #F0CB66;
-    border-radius: 5px 5px;
+    font-size: 4rem;
+    border-bottom: 5px solid #F0CB66;
     width: 50%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-shadow: 1px 1px #DFA4CF;
 }
 
 .media-scroller {
@@ -565,7 +564,8 @@ a {
 
 .outfit-display {
     display: grid;
-    background-color: #8ACE55;
+    background-image: url(../images/shop_item_texture_1.png);
+    //background-color: #8ACE55;
     grid-template-rows: min-content;
     border: 1px solid black;
     margin: 3px;
@@ -592,10 +592,10 @@ a {
     justify-self: center;
     background-color: #F88136;
     border-radius: 5px 5px;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     width: 50%;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin: 15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -625,6 +625,5 @@ a {
         display: grid;
         justify-self: center;
         margin: 20px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 }
