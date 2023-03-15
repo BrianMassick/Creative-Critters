@@ -78,7 +78,7 @@ a {
     & li {
         font-size: 2rem;
         background-color: #8ACE55;
-        border-radius: 15px 15px;
+        border-radius: 10px 10px;
     }
 
     & > li {
@@ -258,7 +258,6 @@ a {
 .critter-card {
     display: flex;
     justify-content: center;
-    border: 2px solid black;
     position: relative;
     top: 0;
     left: 0;
@@ -375,13 +374,12 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid #000;
     margin: 5px 15px;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
     &-title {
         font-size: 2.7rem;
-        margin: 0;
+        margin: 0 0 15px 0;
         padding: 0;
 
         @media screen and (max-width: 1200px) {
@@ -416,9 +414,9 @@ a {
 
     &-button {
         background-color: #8ACE55;
-        border-radius: 5px 5px;
+        border-radius: 10px 10px;
         font-size: 2rem;
-        width: 50%;
+        width: 30%;
         cursor: pointer;
         margin-bottom: 25px;
         padding: 5px 0;
@@ -448,13 +446,12 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid #000;
-    margin: 5px 5px 25px 5px;
+    margin: 5px 15px 25px 15px;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
     &-title {
         font-size: 2.8rem;
-        margin: 0;
+        margin: 0 0 15px 0;
         padding: 0;
 
         @media screen and (max-width: 1000px) {
@@ -481,9 +478,9 @@ a {
 
     &-button {
         background-color: #F88136;
-        border-radius: 5px 5px;
+        border-radius: 10px 10px;
         font-size: 2rem;
-        width: 50%;
+        width: 30%;
         cursor: pointer;
         margin-bottom: 5px;
         display: flex;
@@ -594,9 +591,9 @@ a {
 .outfit-button {
     justify-self: center;
     background-color: #F88136;
-    border-radius: 5px 5px;
+    border-radius: 10px 10px;
     font-size: 1.8rem;
-    width: 50%;
+    width: 30%;
     cursor: pointer;
     margin: 15px 0;
     display: flex;
