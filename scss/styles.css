@@ -61,7 +61,7 @@ a {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  height: 75px;
+  height: 100px;
   width: 100%;
   padding: 1em 0;
   z-index: 99;
@@ -161,18 +161,16 @@ a {
   .menu {
     position: absolute;
     top: 0;
-    margin-top: 90px;
+    margin-top: 110px;
     left: 0;
     flex-direction: column;
-    width: 50%;
-    justify-content: center;
+    width: 30%;
     align-items: center;
   }
   .menu ul {
     margin: 0;
     padding: 0;
     width: 10px;
-    left: 100%;
     top: 105px;
   }
   .circle {
@@ -409,6 +407,8 @@ a {
   cursor: pointer;
   margin-bottom: 25px;
   padding: 5px 0;
+  border: none;
+  box-shadow: 5px 10px #000;
 }
 @media screen and (max-width: 1000px) {
   .game-preview-button {
@@ -478,6 +478,8 @@ a {
   font-weight: 600;
   margin-bottom: 25px;
   padding: 5px 0;
+  border: none;
+  box-shadow: 0px 10px #000;
 }
 @media screen and (max-width: 1000px) {
   .item-preview-button {
@@ -595,6 +597,8 @@ a {
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  border: none;
+  box-shadow: 0px 5px #000;
 }
 
 /* Games page */
