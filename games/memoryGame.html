@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="memoryGame.css" />
+    <link rel="stylesheet" href="../scss/styles.css" />
+  </head>
+  <body>
+
+    <header class="navigation">
+
+        <input type="checkbox" id="menu-toggle">
+        <label class="menu-toggle-label circle" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+
+        <a href="index.html"><div id="cCLogo"></div></a>
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="profile.html">My Profile</a></li>
+        </ul>
+
+        <div class="coin-count"><img src="../images/Coin.png"><span id="coin-bag"></span></div>
+    </header>
+
+    <h1 class="game-title">Memory Game</h1>
+
+    <div class="wrapper">
+      <div class="stats-container">
+        <div id="moves-count"></div>
+        <div id="time"></div>
+      </div>
+      <div class="game-container"></div>
+      <button id="stop" class="hide">Stop Game</button>
+    </div>
+    <div class="controls-container">
+      <p id="result"></p>
+      <button id="start">Start Game</button>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-div">
+            <p class="copyright-text">© Copyright 2023 Creative Critters. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="memoryGame.js"></script>
+    <script src="../main.js"></script>
+  </body>
+</html>
