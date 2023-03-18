@@ -389,7 +389,6 @@ a {
     }
 
     &-image {
-        background-image: url("/images/spellingGameSnippet.JPG");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
@@ -397,6 +396,13 @@ a {
         min-height: 200px;
         height: 60%;
         width: 75%;
+
+        &-spelling {
+            background-image: url("/images/spellingGameSnippet.JPG");
+        }
+        &-memory {
+            background-image: url("/images/memoryGameSnippet.JPG");
+        }
     }
 
     &-text {

@@ -380,7 +380,6 @@ a {
   }
 }
 .game-preview-image {
-  background-image: url("/images/spellingGameSnippet.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -388,6 +387,12 @@ a {
   min-height: 200px;
   height: 60%;
   width: 75%;
+}
+.game-preview-image-spelling {
+  background-image: url("/images/spellingGameSnippet.JPG");
+}
+.game-preview-image-memory {
+  background-image: url("/images/memoryGameSnippet.JPG");
 }
 .game-preview-text {
   font-size: 2rem;
