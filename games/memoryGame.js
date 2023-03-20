@@ -12,6 +12,7 @@ let cards;
 let interval;
 let firstCard = false;
 let secondCard = false;
+let coinsEarned = 20;
 
 // Will temporarily be using the wordImages until I can get some nicer images
 const TILES = [
@@ -100,8 +101,10 @@ const matrixGenerator = (cardValues, size = 4) => {
             firstCard = false;
             winCount += 1;
             if (winCount == Math.floor(cardValues.length / 2)) {
-              result.innerHTML = `<h2>You Won</h2>
-            <h4>Moves: ${movesCount}</h4>`;
+              result.innerHTML = `<h1>You Won</h1>
+            <h3>Moves: ${movesCount}</h3>
+            <h3>Coins Earned: ${coinsEarned}</h3>`;
+              coinWinnings(coinsEarned);
               stopGame();
             }
           } else {
