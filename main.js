@@ -80,6 +80,21 @@ function makePurchase(idName, itemType) {
     coinSpent(100);
 }
 
+// function to equip item from My Items page
+function equipItem(idName, itemType) {
+    let theItem = document.getElementById(`${idName}`);
+    let newItem = window.getComputedStyle(theItem);
+    if (itemType == 'outfit') {
+        theItem.style.backgroundImage = newItem.getPropertyValue('background-image');
+        alert('Item has been equipped');
+        setCritterOutfit(theItem);
+    } else if (itemType == 'background') {
+        theItem.style.backgroundImage = newItem.getPropertyValue('background-image');
+        alert('Item has been equipped');
+        setCritterBackground(theItem);
+    }
+}
+
 // Handles earning of coins
 function coinWinnings(amount) {
     coinAmount = parseInt(coinAmount) + amount;
