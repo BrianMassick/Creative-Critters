@@ -632,4 +632,74 @@ a {
   justify-self: center;
   margin: 20px;
 }
+
+/* My Items page */
+.myitems-container {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 1000px) {
+  .myitems-container {
+    flex-direction: column;
+  }
+}
+
+.critter-card-container {
+  width: 40%;
+}
+@media screen and (max-width: 1000px) {
+  .critter-card-container {
+    width: 100%;
+  }
+}
+
+.myitems-showcase-container {
+  width: 50%;
+}
+@media screen and (max-width: 1000px) {
+  .myitems-showcase-container {
+    width: 100%;
+  }
+}
+
+.myitems-media-scroller {
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;
+  grid-auto-columns: 42%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+.myitems-media-scroller::-webkit-scrollbar {
+  margin-top: 20px;
+}
+.myitems-media-scroller::-webkit-scrollbar-track {
+  background-color: #49B0D5;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.myitems-media-scroller::-webkit-scrollbar-thumb {
+  background: #DFA4CF;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1500px) {
+  .myitems-media-scroller {
+    grid-auto-columns: 56%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .myitems-media-scroller {
+    grid-auto-columns: 50%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .myitems-media-scroller {
+    grid-auto-columns: 60%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .myitems-media-scroller {
+    grid-auto-columns: 80%;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

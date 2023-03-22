@@ -32,7 +32,7 @@ if (newUser) {
 
 // function to set local storage values
 function setLocalStorage() {
-    if (document.URL.includes("index.html")) {
+    if (document.URL.includes("index.html") || document.URL.includes("myItems.html")) {
         window.localStorage.setItem('critter', currentCritter);
         window.localStorage.setItem('outfit', currentOutfit);
         window.localStorage.setItem('background', currentBackground);
@@ -44,7 +44,7 @@ function setLocalStorage() {
 
 // function to get local storage values
 function getLocalStorage() {
-    if (document.URL.includes("index.html")) {
+    if (document.URL.includes("index.html") || document.URL.includes("myItems.html")) {
         currentCritter = window.localStorage.getItem('critter');
         currentOutfit = window.localStorage.getItem('outfit');
         currentBackground = window.localStorage.getItem('background');
@@ -55,7 +55,7 @@ function getLocalStorage() {
 
 // function will assign the items from local storage to their respective locations
 function setPlayerItems() {
-    if (document.URL.includes("index.html")) {
+    if (document.URL.includes("index.html") || document.URL.includes("myItems.html")) {
         critterOutfit.style.backgroundImage = currentOutfit;
         backgroundDisplay.style.backgroundImage = currentBackground;
     } else {}
@@ -113,7 +113,7 @@ function coinSpent(amount) {
 function setCritterBackground(background) {
     currentBackground = background.style.backgroundImage;
     window.localStorage.setItem('background', currentBackground);
-    if (document.URL.includes("index.html")) {
+    if (document.URL.includes("index.html") || document.URL.includes("myItems.html")) {
         backgroundDisplay.style.backgroundImage = currentBackground;
     }
 }
@@ -122,7 +122,7 @@ function setCritterBackground(background) {
 function setCritterOutfit(outfit) {
     currentOutfit = outfit.style.backgroundImage;
     window.localStorage.setItem('outfit', currentOutfit);
-    if (document.URL.includes("index.html")) {
+    if (document.URL.includes("index.html") || document.URL.includes("myItems.html")) {
         critterOutfit.style.backgroundImage = currentOutfit;
     }
 }

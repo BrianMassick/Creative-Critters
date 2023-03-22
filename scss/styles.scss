@@ -636,3 +636,65 @@ a {
         margin: 20px;
     }
 }
+
+/* My Items page */
+.myitems-container {
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
+}
+
+.critter-card-container {
+    width: 40%;
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+    }
+}
+
+.myitems-showcase-container {
+    width: 50%;
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+    }
+}
+
+.myitems-media-scroller {
+    display: grid;
+    width: 100%;
+    grid-auto-flow: column;
+    grid-auto-columns: 42%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    &::-webkit-scrollbar {
+        margin-top: 20px;
+
+        &-track {
+            background-color: #49B0D5;
+            box-shadow: inset 0 0 5px grey; 
+            border-radius: 10px;
+        }
+
+        &-thumb {
+            background: #DFA4CF;
+            border-radius: 10px;
+        }
+    }
+
+    @media screen and (max-width: 1500px) {
+        grid-auto-columns: 56%;
+    }
+    @media screen and (max-width: 1000px) {
+        grid-auto-columns: 50%;
+    }
+    @media screen and (max-width: 700px) {
+        grid-auto-columns: 60%;
+    }
+    @media screen and (max-width: 500px) {
+        grid-auto-columns: 80%;
+    }
+}
