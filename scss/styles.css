@@ -637,6 +637,7 @@ a {
 .myitems-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 @media screen and (max-width: 1000px) {
   .myitems-container {
@@ -654,7 +655,7 @@ a {
 }
 
 .myitems-showcase-container {
-  width: 50%;
+  width: 55%;
 }
 @media screen and (max-width: 1000px) {
   .myitems-showcase-container {
