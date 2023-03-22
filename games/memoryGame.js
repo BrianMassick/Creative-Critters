@@ -16,18 +16,18 @@ let coinsEarned = 20;
 
 // Will temporarily be using the wordImages until I can get some nicer images
 const TILES = [
-    { name: "bunny", image: './wordImages/bunny.jpg' },
-    { name: "chair", image: './wordImages/chair.jpg' },
-    { name: "glove", image: './wordImages/glove.jpg' },
-    { name: "group", image: './wordImages/group.jpg' },
-    { name: "happy", image: './wordImages/happy.jpg' },
-    { name: "horse", image: './wordImages/horse.jpg' },
-    { name: "house", image: './wordImages/house.jpg' },
-    { name: "laugh", image: './wordImages/laugh.jpg' },
-    { name: "moose", image: './wordImages/moose.jpg' },
-    { name: "panda", image: './wordImages/panda.jpg' },
-    { name: "pants", image: './wordImages/pants.jpg' },
-    { name: "river", image: './wordImages/river.jpg' },
+    { name: "rat", image: './memoryImages/rat.png' },
+    { name: "ox", image: './memoryImage/ox.png' },
+    { name: "tiger", image: './memoryImage/tiger.png' },
+    { name: "rabbit", image: './memoryImage/rabbit.png' },
+    { name: "dragon", image: './memoryImage/dragon.png' },
+    { name: "snake", image: './memoryImage/snake.png' },
+    { name: "horse", image: './memoryImage/horse.png' },
+    { name: "goat", image: './memoryImage/goat.png' },
+    { name: "monkey", image: './memoryImage/monkey.png' },
+    { name: "rooster", image: './memoryImage/rooster.png' },
+    { name: "dog", image: './memoryImage/dog.png' },
+    { name: "pig", image: './memoryImage/pig.png' },
   ];
 
 let seconds = 0,
