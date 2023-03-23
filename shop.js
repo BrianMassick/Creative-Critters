@@ -12,22 +12,22 @@ function backgroundShowcase() {
     let i = 0;
 
     while (i < showcaseSize) {
+        var div = document.createElement('div');
+        var section = document.createElement('section');
+        var button = document.createElement('button');
+        var img = document.createElement('img');
+
+        div.className = 'outfit-display';
+        section.id = `background-image-${i}`;
+        section.style.backgroundImage = `url("http://127.0.0.1:5500/backgrounds/${BACKGROUNDS[i]}Background.jpg")`;
+        section.style.backgroundPosition = 'center';
+
         // if item is owned, it will not display (doesnt work with multiple items yet)
         if (BACKGROUNDS[i] == MYBACKGROUNDS[i]) {
-            console.log("Background already owned");
+            button.className = 'owned-button';
+            button.insertAdjacentHTML('beforeend', 'Owned');
         } else {
-            var div = document.createElement('div');
-            var section = document.createElement('section');
-            var button = document.createElement('button');
-            var img = document.createElement('img');
-
-            div.className = 'outfit-display';
-            section.id = `background-image-${i}`;
             button.className = 'outfit-button';
-
-            section.style.backgroundImage = `url("http://127.0.0.1:5500/backgrounds/${BACKGROUNDS[i]}Background.jpg")`;
-            section.style.backgroundPosition = 'center';
-            img.src = './images/Coin.png';
 
             button.onclick = function(i) {
                 return function() {
@@ -35,12 +35,15 @@ function backgroundShowcase() {
                 };
             }(i);
 
+            img.src = './images/Coin.png';
             button.appendChild(img);
             button.insertAdjacentHTML('beforeend', '100');
-            div.appendChild(section);
-            div.appendChild(button);
-            backgroundShowcaseDisplay.appendChild(div);
-            }
+        }
+
+
+        div.appendChild(section);
+        div.appendChild(button);
+        backgroundShowcaseDisplay.appendChild(div);
         ++i;
     }
 }
@@ -51,17 +54,23 @@ function outfitShowcase() {
     let i = 0;
 
     while (i < showcaseSize) {
-        // if item is owned, it will not display (doesnt work with multiple items yet)
-        if (OUTFITS[i] == MYOUTFITS[i]) {
-            console.log("Item already owned");
-        } else {
-            var div = document.createElement('div');
-            var section = document.createElement('section');
-            var button = document.createElement('button');
-            var img = document.createElement('img');
+        var div = document.createElement('div');
+        var section = document.createElement('section');
+        var button = document.createElement('button');
+        var img = document.createElement('img');
 
-            div.className = 'outfit-display';
-            section.id = `outfit-image-${i}`;
+        div.className = 'outfit-display';
+        section.id = `outfit-image-${i}`;
+        section.style.backgroundImage = `url("http://127.0.0.1:5500/outfits/${OUTFITS[i]}.png")`;
+        section.style.backgroundPosition = 'center';
+
+        // if item is owned, it will display owned (doesnt work with multiple items yet)
+        if (OUTFITS[i] == MYOUTFITS[i]) {
+            button.className = 'owned-button';
+
+            button.insertAdjacentHTML('beforeend', 'Owned');
+
+        } else {
             button.className = 'outfit-button';
 
             button.onclick = function(i) {
@@ -70,16 +79,14 @@ function outfitShowcase() {
                 };
             }(i);
 
-            section.style.backgroundImage = `url("http://127.0.0.1:5500/outfits/${OUTFITS[i]}.png")`;
-            section.style.backgroundPosition = 'center';
             img.src = './images/Coin.png';
-
             button.appendChild(img);
             button.insertAdjacentHTML('beforeend', '100');
-            div.appendChild(section);
-            div.appendChild(button);
-            outfitShowcaseDisplay.appendChild(div);
-            }
+        }
+
+        div.appendChild(section);
+        div.appendChild(button);
+        outfitShowcaseDisplay.appendChild(div);
         ++i;
     }
 }

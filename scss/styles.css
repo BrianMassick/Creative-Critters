@@ -529,6 +529,7 @@ a {
   grid-auto-columns: 21%;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+  margin-bottom: 30px;
 }
 .media-scroller::-webkit-scrollbar {
   margin-top: 20px;
@@ -593,6 +594,23 @@ a {
 .outfit-button {
   justify-self: center;
   background-color: #F88136;
+  border-radius: 10px 10px;
+  font-size: 1.8rem;
+  width: 30%;
+  cursor: pointer;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0px 5px #000;
+}
+
+.owned-button {
+  justify-self: center;
+  background-color: #414141;
+  color: #fff;
   border-radius: 10px 10px;
   font-size: 1.8rem;
   width: 30%;
