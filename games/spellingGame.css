@@ -1,7 +1,13 @@
 /* Code is assisted by a tutorial on freeCodeCamp found here https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/ */
-h1 {
-  font-size: 3rem;
-    text-align: center;
+.game-title{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-size: 3em;
+  text-shadow: 1px 1px #DFA4CF;
+  border-bottom: 5px solid #49B0D5;
+  width: 50%;
+  margin-top: 1.5em;
 }
 
 .game-wrapper {
@@ -11,13 +17,14 @@ h1 {
   flex-direction: column;
   align-self: center;
   background-color: white;
-  border-radius: 4rem 4rem;
+  border-radius: 2rem 2rem;
 }
 
 .image-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 50px;
 }
 
 .word-image {
