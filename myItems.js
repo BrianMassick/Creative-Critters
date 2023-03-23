@@ -1,12 +1,9 @@
-import { MYBACKGROUNDS } from './itemBank/ownedBackgrounds.js';
-import { MYOUTFITS } from './itemBank/ownedOutfits.js';
-
 let outfitShowcaseDisplay = document.getElementById('outfit-showcase');
 let backgroundShowcaseDisplay = document.getElementById('background-showcase');
 
 // function creates background showcase with owned items
 function backgroundShowcase() {
-    var showcaseSize = MYBACKGROUNDS.length;
+    var showcaseSize = ownedBackgrounds.length;
     let i = 0;
 
     while (i < showcaseSize) {
@@ -18,7 +15,7 @@ function backgroundShowcase() {
         section.id = `background-image-${i}`;
         button.className = 'outfit-button';
 
-        section.style.backgroundImage = `url("http://127.0.0.1:5500/backgrounds/${MYBACKGROUNDS[i]}Background.jpg")`;
+        section.style.backgroundImage = `url("http://127.0.0.1:5500/backgrounds/${ownedBackgrounds[i]}Background.jpg")`;
         section.style.backgroundPosition = 'center';
 
         button.onclick = function(i) {
@@ -37,7 +34,7 @@ function backgroundShowcase() {
 
 // function creates outfit showcase with owned items
 function outfitShowcase() {
-    var showcaseSize = MYOUTFITS.length;
+    var showcaseSize = ownedOutfits.length;
     let i = 0;
 
     while (i < showcaseSize) {
@@ -55,7 +52,7 @@ function outfitShowcase() {
             };
         }(i);
 
-        section.style.backgroundImage = `url("http://127.0.0.1:5500/outfits/${MYOUTFITS[i]}.png")`;
+        section.style.backgroundImage = `url("http://127.0.0.1:5500/outfits/${ownedOutfits[i]}.png")`;
         section.style.backgroundPosition = 'center';
 
         button.insertAdjacentHTML('beforeend', 'Equip');

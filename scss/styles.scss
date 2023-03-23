@@ -540,7 +540,7 @@ a {
     grid-auto-columns: 21%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     &::-webkit-scrollbar {
         margin-top: 20px;
@@ -661,6 +661,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 50px;
 
     @media screen and (max-width: 1000px) {
         flex-direction: column;
