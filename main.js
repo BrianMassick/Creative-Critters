@@ -5,6 +5,9 @@ let currentCritter;
 let currentOutfit;
 let currentBackground;
 
+let ownedBackgrounds = ['hill'];
+let ownedOutfits = ['bunny-basic'];
+
 let coinDisplay = document.getElementById('coin-bag');
 let critterOutfit = document.getElementById('critter-character');
 let backgroundDisplay = document.getElementById('critter-background');
@@ -37,6 +40,8 @@ function setLocalStorage() {
         window.localStorage.setItem('outfit', currentOutfit);
         window.localStorage.setItem('background', currentBackground);
     } else {}
+    localStorage.setItem('ownedOutfits', JSON.stringify(ownedOutfits));
+    localStorage.setItem('ownedBackgrounds', JSON.stringify(ownedBackgrounds));
     window.localStorage.setItem('visit', 'returning');
     window.localStorage.setItem('coins', coinAmount);
     setPlayerItems();
@@ -53,31 +58,58 @@ function getLocalStorage() {
     setPlayerItems();
 }
 
+// functions for setting owned items
+function setOwnedOutfit(itemID) {
+    ownedOutfits.push(itemID);
+    localStorage.setItem('ownedOutfits', JSON.stringify(ownedOutfits));
+    getOwnedOutfits();
+}
+
+function setOwnedBackground(itemID) {
+    ownedBackgrounds.push(itemID);
+    localStorage.setItem('ownedBackgrounds', JSON.stringify(ownedBackgrounds));
+    getOwnedBackgrounds();
+}
+
+// functions to get owned items
+function getOwnedOutfits() {
+    ownedOutfits = JSON.parse(localStorage.ownedOutfits);
+}
+
+function getOwnedBackgrounds() {
+    ownedBackgrounds = JSON.parse(localStorage.ownedBackgrounds);
+}
+
 // function will assign the items from local storage to their respective locations
 function setPlayerItems() {
     if (document.URL.includes("index.html") || document.URL.includes("myItems.html")) {
         critterOutfit.style.backgroundImage = currentOutfit;
         backgroundDisplay.style.backgroundImage = currentBackground;
     } else {}
+    ownedOutfits = JSON.parse(localStorage.ownedOutfits);
+    ownedBackgrounds = JSON.parse(localStorage.ownedBackgrounds);
     coinDisplay.innerHTML = `${coinAmount}`;
 }
 
 // function will be called when any purchase button is clicked
-function makePurchase(idName, itemType) {
+function makePurchase(idName, itemType, itemID) {
     let theItem = document.getElementById(`${idName}`);
     let newItem = window.getComputedStyle(theItem);
     if (coinAmount < 100) { alert('Not enough coins!'); return; }
     console.log(newItem);
     if (itemType == 'outfit') {
         theItem.style.backgroundImage = newItem.getPropertyValue('background-image');
+        setOwnedOutfit(itemID);
         setCritterOutfit(theItem);
     } else if (itemType == 'background') {
         theItem.style.backgroundImage = newItem.getPropertyValue('background-image');
+        setOwnedBackground(itemID);
         setCritterBackground(theItem);
     }
 
     alert('Thanks for your purchase!');
     coinSpent(100);
+    location.reload();
 }
 
 // function to equip item from My Items page

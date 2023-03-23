@@ -1,7 +1,5 @@
 import { BACKGROUNDS } from './itemBank/backgrounds.js';
 import { OUTFITS } from './itemBank/outfits.js';
-import { MYBACKGROUNDS } from './itemBank/ownedBackgrounds.js';
-import { MYOUTFITS } from './itemBank/ownedOutfits.js';
 
 let outfitShowcaseDisplay = document.getElementById('outfit-showcase');
 let backgroundShowcaseDisplay = document.getElementById('background-showcase');
@@ -23,7 +21,7 @@ function backgroundShowcase() {
         section.style.backgroundPosition = 'center';
 
         // if item is owned, it will not display (doesnt work with multiple items yet)
-        if (MYBACKGROUNDS.includes(BACKGROUNDS[i])) {
+        if (ownedBackgrounds.includes(BACKGROUNDS[i])) {
             button.className = 'owned-button';
             button.insertAdjacentHTML('beforeend', 'Owned');
         } else {
@@ -31,7 +29,7 @@ function backgroundShowcase() {
 
             button.onclick = function(i) {
                 return function() {
-                    addBoughtItem(`background-image-${i}`, 'background', BACKGROUNDS[i]);
+                    makePurchase(`background-image-${i}`, 'background', BACKGROUNDS[i]);
                 };
             }(i);
 
@@ -65,7 +63,7 @@ function outfitShowcase() {
         section.style.backgroundPosition = 'center';
 
         // if item is owned, it will display owned (doesnt work with multiple items yet)
-        if (MYOUTFITS.includes(OUTFITS[i])) {
+        if (ownedOutfits.includes(OUTFITS[i])) {
             button.className = 'owned-button';
 
             button.insertAdjacentHTML('beforeend', 'Owned');
@@ -75,7 +73,7 @@ function outfitShowcase() {
 
             button.onclick = function(i) {
                 return function() {
-                    addBoughtItem(`outfit-image-${i}`, 'outfit', OUTFITS[i]);
+                    makePurchase(`outfit-image-${i}`, 'outfit', OUTFITS[i]);
                 };
             }(i);
 
@@ -88,16 +86,6 @@ function outfitShowcase() {
         div.appendChild(button);
         outfitShowcaseDisplay.appendChild(div);
         ++i;
-    }
-}
-
-function addBoughtItem(idName, itemType, itemID) {
-    if (itemType == 'outfit') {
-        MYOUTFITS.push(itemID);
-        makePurchase(idName, itemType);
-    } else if (itemType == 'background') {
-        MYBACKGROUNDS.push(itemID);
-        makePurchase(idName, itemType);
     }
 }
 
