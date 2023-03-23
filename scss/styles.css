@@ -386,7 +386,7 @@ a {
   border: 1px solid #000;
   min-height: 200px;
   height: 60%;
-  width: 75%;
+  width: 80%;
 }
 .game-preview-image-spelling {
   background-image: url("/images/spellingGameSnippet.JPG");
@@ -396,7 +396,7 @@ a {
 }
 .game-preview-text {
   font-size: 2rem;
-  text-align: center;
+  text-align: left;
   width: 80%;
 }
 @media screen and (max-width: 1000px) {
@@ -458,11 +458,11 @@ a {
   border: 1px solid #000;
   min-height: 200px;
   height: 60%;
-  width: 75%;
+  width: 80%;
 }
 .item-preview-text {
   font-size: 2rem;
-  text-align: center;
+  text-align: left;
   width: 80%;
 }
 @media screen and (max-width: 1000px) {
