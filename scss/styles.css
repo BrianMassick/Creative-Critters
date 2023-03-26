@@ -30,7 +30,10 @@ html, body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+}
+a:visited {
+  color: inherit;
 }
 
 .page-wrapper {
@@ -89,7 +92,7 @@ a {
 .menu li a {
   margin: 10px;
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .menu li:hover {
   opacity: 70%;
