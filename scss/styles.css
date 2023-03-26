@@ -414,6 +414,10 @@ a {
   padding: 5px 0;
   border: none;
   box-shadow: 5px 10px #000;
+  text-align: center;
+}
+.game-preview-button:visited {
+  color: #000;
 }
 @media screen and (max-width: 1000px) {
   .game-preview-button {
