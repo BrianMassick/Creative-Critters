@@ -531,6 +531,20 @@ a {
     align-items: center;
 }
 
+// These wont be hardcoded forever
+#item-1 {
+    background-image: url(../backgrounds/forestBackground.jpg);
+    background-position: center;
+}
+#item-2 {
+    background-image: url(../backgrounds/hillBackground.jpg);
+    background-position: center;
+}
+#item-3 {
+    background-image: url(../outfits/bunny-cute.png);
+    background-position: center;
+}
+
 /* Shop page */
 // This code is helped along by the tutorial by Kevin Powell @ https://www.youtube.com/watch?v=3yfswsnD2sw&ab_channel=KevinPowell
 .shop-wrapper {
@@ -636,6 +650,7 @@ a {
     font-weight: 600;
     border: none;
     box-shadow: 0px 5px #000;
+    max-height: 100px;
 
     @media screen and (max-width: 2400px) {
         width: 60%;
@@ -658,6 +673,7 @@ a {
     font-weight: 600;
     border: none;
     box-shadow: 0px 5px #000;
+    max-height: 100px;
 
     @media screen and (max-width: 2400px) {
         width: 60%;

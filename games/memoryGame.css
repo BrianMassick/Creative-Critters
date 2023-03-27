@@ -12,6 +12,13 @@
   body {
     background-color: #ffffff;
   }
+  .page-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
   .game-title{
     display: flex;
     justify-content: center;
@@ -24,13 +31,11 @@
   }
   .wrapper {
     box-sizing: content-box;
+    margin: 3em auto;
     width: 30em;
-    padding: 2.5em 3em;
+    height: 45em;
+    padding: 2.5em;
     background-color: #ffffff;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
     border-radius: 0.6em;
     box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
   }
@@ -89,10 +94,10 @@
     justify-content: center;
     flex-direction: column;
     width: 50%;
-    height: 60%;
+    height: 50em;
     background-color: #F0CB66;
     align-self: center;
-    top: 22%;
+    top: 28%;
   }
   button {
     margin-top: 1.2em;
@@ -136,17 +141,24 @@
 
   @media screen and (max-width: 1000px) {
     .controls-container {
-        width: 75%;
+        width: 100%;
     }
     .wrapper {
-      width: 90%;
+      width: 30em;
+      justify-self: left;
+    }
+    .game-container {
+      gap: 1em;
+    }
+    .card-container {
+      width: 6.25em;
     }
   }
   @media screen and (max-width: 700px) {
-    .controls-container {
-        width: 100%;
-    }
     .game-title {
-      width: 100%;
+      width: 90%;
+    }
+    .game-container {
+      gap: 0.5em;
     }
   }
