@@ -247,8 +247,8 @@ a {
 
 .footer-div {
     display: flex;
-    align-items: flex-end;
-    justify-content: left;
+    align-items: center;
+    justify-content: space-between;
     height: auto;
     width: 100%;
     background-color: #DFA4CF;
@@ -520,18 +520,15 @@ a {
     }
 }
 
-// These wont be hardcoded colours forever
-#item-1 {
-    background-image: url(../backgrounds/forestBackground.jpg);
-    background-position: center;
-}
-#item-2 {
-    background-image: url(../backgrounds/hillBackground.jpg);
-    background-position: center;
-}
-#item-3 {
-    background-image: url(../outfits/bunny-cute.png);
-    background-position: center;
+.reset-data {
+    background-color: #000;
+    border-radius: 10px 10px;
+    font-size: 1rem;
+    width: 20%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Shop page */

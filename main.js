@@ -158,3 +158,9 @@ function setCritterOutfit(outfit) {
         critterOutfit.style.backgroundImage = currentOutfit;
     }
 }
+
+// Function resets all local data
+function resetLocalData() {
+    window.localStorage.clear();
+    window.location.reload();
+}
