@@ -82,6 +82,10 @@ a {
         font-size: 2rem;
         background-color: #8ACE55;
         border-radius: 10px 10px;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 1.5rem;
+        }
     }
 
     & > li {
@@ -153,7 +157,7 @@ a {
     transform: rotate(-405deg);
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 980px) {
 
     .navigation {
         margin: 0;
@@ -379,7 +383,7 @@ a {
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
     &-title {
-        font-size: 2.7rem;
+        font-size: 2.5rem;
         margin: 0 0 15px 0;
         padding: 0;
 
@@ -423,7 +427,7 @@ a {
         background-color: #8ACE55;
         border-radius: 10px 10px;
         font-size: 2rem;
-        width: 30%;
+        width: 50%;
         cursor: pointer;
         margin-bottom: 25px;
         padding: 5px 0;
@@ -433,6 +437,10 @@ a {
 
         &:visited {
             color: #000;
+        }
+
+        @media screen and (max-width: 2400px) {
+            width: 60%;
         }
 
         @media screen and (max-width: 1000px) {
@@ -494,7 +502,7 @@ a {
         background-color: #F88136;
         border-radius: 10px 10px;
         font-size: 2rem;
-        width: 30%;
+        width: 50%;
         cursor: pointer;
         margin-bottom: 5px;
         display: flex;
@@ -540,6 +548,17 @@ a {
     border-bottom: 5px solid #F0CB66;
     width: 50%;
     text-shadow: 1px 1px #DFA4CF;
+    margin-left: 0;
+    margin-right: 0;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 3rem;
+    }
+
+    @media screen and (max-width: 900px) {
+        font-size: 2.5;
+        width: 100%;
+    }
 }
 
 .media-scroller {
@@ -611,7 +630,7 @@ a {
     background-color: #F88136;
     border-radius: 10px 10px;
     font-size: 1.8rem;
-    width: 30%;
+    width: 50%;
     cursor: pointer;
     margin: 15px 0;
     display: flex;
@@ -620,6 +639,11 @@ a {
     font-weight: 600;
     border: none;
     box-shadow: 0px 5px #000;
+
+    @media screen and (max-width: 2400px) {
+        width: 60%;
+        font-size: 1.5rem;
+    }
 }
 
 .owned-button {
@@ -637,6 +661,11 @@ a {
     font-weight: 600;
     border: none;
     box-shadow: 0px 5px #000;
+
+    @media screen and (max-width: 2400px) {
+        width: 60%;
+        font-size: 1.5rem;
+    }
 }
 
 /* Games page */
@@ -672,7 +701,7 @@ a {
     justify-content: space-between;
     margin-bottom: 50px;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
         flex-direction: column;
     }
 }
@@ -680,7 +709,7 @@ a {
 .critter-card-container {
     width: 40%;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
         width: 100%;
     }
 }
@@ -688,7 +717,7 @@ a {
 .myitems-showcase-container {
     width: 55%;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
         width: 100%;
     }
 }
@@ -726,5 +755,19 @@ a {
     }
     @media screen and (max-width: 500px) {
         grid-auto-columns: 80%;
+    }
+}
+
+.myitems-outfits-title {
+    font-size: 4rem;
+    border-bottom: 5px solid #F0CB66;
+    width: 50%;
+    text-shadow: 1px 1px #DFA4CF;
+    margin-left: 0;
+    margin-right: 0;
+
+    @media screen and (max-width: 2200px) {
+        font-size: 3rem;
+        width: 100%;
     }
 }

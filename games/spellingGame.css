@@ -92,7 +92,19 @@
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
+  .game-wrapper {
+    width: 100%;
+  }
+  .word-image {
+    width: 90%;
+  }
+  .keyboard-button {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .keyboard-button{
     font-size: 1rem;
   }
