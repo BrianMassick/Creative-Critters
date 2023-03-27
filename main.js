@@ -12,18 +12,6 @@ let coinDisplay = document.getElementById('coin-bag');
 let critterOutfit = document.getElementById('critter-character');
 let backgroundDisplay = document.getElementById('critter-background');
 
-// Featured item buttons
-let item1 = document.getElementById('b-1');
-let item2 = document.getElementById('b-2');
-let item3 = document.getElementById('b-3');
-
-// Event listeners for buttons in featured items (homepage)
-if (document.URL.includes("index.html")) {
-    item1.addEventListener('click', function() { makePurchase('item-1', 'background') });
-    item2.addEventListener('click', function() { makePurchase('item-2', 'background') });
-    item3.addEventListener('click', function() { makePurchase('item-3', 'outfit') });
-}
-
 //Is this a new user
 const newUser = localStorage.getItem('visit') == null;
 if (newUser) {
