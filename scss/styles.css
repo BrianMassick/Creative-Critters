@@ -574,6 +574,7 @@ a:visited {
 }
 .media-scroller::-webkit-scrollbar {
   margin-top: 20px;
+  height: 2.5rem;
 }
 .media-scroller::-webkit-scrollbar-track {
   background-color: #49B0D5;
@@ -582,7 +583,7 @@ a:visited {
 }
 .media-scroller::-webkit-scrollbar-thumb {
   background: #DFA4CF;
-  border-radius: 10px;
+  border-radius: 50px;
 }
 @media screen and (max-width: 1500px) {
   .media-scroller {
@@ -747,6 +748,7 @@ a:visited {
 }
 .myitems-media-scroller::-webkit-scrollbar {
   margin-top: 20px;
+  height: 2.5rem;
 }
 .myitems-media-scroller::-webkit-scrollbar-track {
   background-color: #49B0D5;
@@ -755,7 +757,7 @@ a:visited {
 }
 .myitems-media-scroller::-webkit-scrollbar-thumb {
   background: #DFA4CF;
-  border-radius: 10px;
+  border-radius: 50px;
 }
 @media screen and (max-width: 1500px) {
   .myitems-media-scroller {

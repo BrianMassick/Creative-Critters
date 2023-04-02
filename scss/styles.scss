@@ -583,6 +583,7 @@ a {
 
     &::-webkit-scrollbar {
         margin-top: 20px;
+        height: 2.5rem;
 
         &-track {
             background-color: #49B0D5;
@@ -592,7 +593,7 @@ a {
 
         &-thumb {
             background: #DFA4CF;
-            border-radius: 10px;
+            border-radius: 50px;
         }
     }
 
@@ -744,6 +745,7 @@ a {
     overscroll-behavior-inline: contain;
     &::-webkit-scrollbar {
         margin-top: 20px;
+        height: 2.5rem;
 
         &-track {
             background-color: #49B0D5;
@@ -753,7 +755,7 @@ a {
 
         &-thumb {
             background: #DFA4CF;
-            border-radius: 10px;
+            border-radius: 50px;
         }
     }
 
