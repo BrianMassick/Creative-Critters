@@ -70,6 +70,11 @@ a:visited {
   z-index: 99;
 }
 
+#active {
+  background-color: #DFA4CF;
+  box-shadow: #000 5px 5px 10px;
+}
+
 .menu {
   display: flex;
   flex-direction: row;
