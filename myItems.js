@@ -5,6 +5,7 @@ let backgroundShowcaseDisplay = document.getElementById('background-showcase');
 function backgroundShowcase() {
     var showcaseSize = ownedBackgrounds.length;
     let i = 0;
+    let usingBackground = window.getComputedStyle(backgroundDisplay);
 
     while (i < showcaseSize) {
         var div = document.createElement('div');
@@ -13,18 +14,26 @@ function backgroundShowcase() {
 
         div.className = 'outfit-display';
         section.id = `background-image-${i}`;
-        button.className = 'outfit-button';
 
         section.style.backgroundImage = `url("http://127.0.0.1:5500/backgrounds/${ownedBackgrounds[i]}Background.jpg")`;
         section.style.backgroundPosition = 'center';
 
-        button.onclick = function(i) {
-            return function() {
-                equipItem(`background-image-${i}`, 'background');
-            };
-        }(i);
+        // if item is equipped, button says "Using"
+        if (usingBackground.getPropertyValue('background-image') == `url("http://127.0.0.1:5500/backgrounds/${ownedBackgrounds[i]}Background.jpg")`) {
+            button.className = 'myitems-using-button';
+            button.insertAdjacentHTML('beforeend', 'Using');
+        } else {
+            button.className = 'outfit-button';
 
-        button.insertAdjacentHTML('beforeend', 'Equip');
+            button.onclick = function(i) {
+                return function() {
+                    equipItem(`background-image-${i}`, 'background');
+                };
+            }(i);
+
+            button.insertAdjacentHTML('beforeend', 'Use');
+        }
+
         div.appendChild(section);
         div.appendChild(button);
         backgroundShowcaseDisplay.appendChild(div);
@@ -36,6 +45,7 @@ function backgroundShowcase() {
 function outfitShowcase() {
     var showcaseSize = ownedOutfits.length;
     let i = 0;
+    let usingCritter = window.getComputedStyle(critterOutfit);
 
     while (i < showcaseSize) {
         var div = document.createElement('div');
@@ -44,18 +54,26 @@ function outfitShowcase() {
 
         div.className = 'outfit-display';
         section.id = `outfit-image-${i}`;
-        button.className = 'outfit-button';
-
-        button.onclick = function(i) {
-            return function() {
-                equipItem(`outfit-image-${i}`, 'outfit');
-            };
-        }(i);
 
         section.style.backgroundImage = `url("http://127.0.0.1:5500/outfits/${ownedOutfits[i]}.png")`;
         section.style.backgroundPosition = 'center';
 
-        button.insertAdjacentHTML('beforeend', 'Equip');
+        // if item is equipped, button says "Using"
+        if (usingCritter.getPropertyValue('background-image') == `url("http://127.0.0.1:5500/outfits/${ownedOutfits[i]}.png")`) {
+            button.className = 'myitems-using-button';
+            button.insertAdjacentHTML('beforeend', 'Using');
+        } else {
+            button.className = 'outfit-button';
+
+            button.onclick = function(i) {
+                return function() {
+                    equipItem(`outfit-image-${i}`, 'outfit');
+                };
+            }(i);
+
+            button.insertAdjacentHTML('beforeend', 'Use');
+        }
+
         div.appendChild(section);
         div.appendChild(button);
         outfitShowcaseDisplay.appendChild(div);

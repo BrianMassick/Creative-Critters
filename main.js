@@ -136,6 +136,8 @@ function setCritterBackground(background) {
     if (document.URL.includes("index.html") || document.URL.includes("myItems.html")) {
         backgroundDisplay.style.backgroundImage = currentBackground;
     }
+
+    location.reload();
 }
 
 // Handles setting of critter outfit
@@ -145,6 +147,8 @@ function setCritterOutfit(outfit) {
     if (document.URL.includes("index.html") || document.URL.includes("myItems.html")) {
         critterOutfit.style.backgroundImage = currentOutfit;
     }
+
+    location.reload();
 }
 
 // Function resets all local data
