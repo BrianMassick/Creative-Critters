@@ -9,6 +9,13 @@
     margin: 0;
     box-sizing: border-box;
   }
+  html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+  }
   body {
     background-color: #ffffff;
   }
@@ -73,7 +80,7 @@
     backface-visibility: hidden;
   }
   .card-before {
-    background-color: #F0CB66;
+    background-color: #F0CF75;
     font-size: 2.8em;
     font-weight: 600;
   }
@@ -94,10 +101,10 @@
     justify-content: center;
     flex-direction: column;
     width: 50%;
-    height: 50em;
-    background-color: #F0CB66;
+    height: 60em;
+    background-color: #F0CF75;
     align-self: center;
-    top: 28%;
+    top: 20%;
   }
   button {
     margin-top: 1.2em;

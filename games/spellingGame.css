@@ -1,4 +1,12 @@
 /* Code is assisted by a tutorial on freeCodeCamp found here https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/ */
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
 .game-title{
   display: flex;
   justify-content: center;
