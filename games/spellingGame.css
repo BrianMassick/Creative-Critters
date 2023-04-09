@@ -22,26 +22,28 @@ html {
   display: flex;
   padding: 10px;
   margin: 25px 0;
-  flex-direction: column;
+  flex-direction: row;
   align-self: center;
   background-color: white;
-  border-radius: 2rem 2rem;
+  border-radius: 0.5rem 0.5rem;
 }
 
 .image-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 50px;
 }
 
 .word-image {
     border: 2px solid black;
-    height: 15rem;
-    width: 100%;
+    height: 100%;
+    width: 30rem;
     background-position: center;
-    margin-bottom: 0.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 5px 5px;
+    margin-right: 2rem;
+    margin-left: 1rem;
 }
 
 #game-board {
@@ -98,6 +100,22 @@ html {
   margin: 0 4px;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1200px) {
+  .game-wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+  .word-image {
+    height: 20rem;
+    width: 90%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .image-wrap {
+    align-items: flex-start;
+  }
 }
 
 @media screen and (max-width: 1000px) {
