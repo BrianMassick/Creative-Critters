@@ -100,9 +100,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 50%;
-    height: 60em;
-    background-color: #F0CF75;
+    width: 60%;
+    height: 65em;
+    background-color: #f0f0f0;
     align-self: center;
     top: 20%;
   }
