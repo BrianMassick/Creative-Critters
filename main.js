@@ -95,7 +95,7 @@ function makePurchase(idName, itemType, itemID) {
         setCritterBackground(theItem);
     }
 
-    alert('Thanks for your purchase!');
+    //alert('Thanks for your purchase!');
     coinSpent(100);
     location.reload();
 }
