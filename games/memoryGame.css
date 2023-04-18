@@ -35,6 +35,7 @@
     border-bottom: 5px solid #49B0D5;
     width: 50%;
     margin-top: 1.5em;
+    z-index: 2;
   }
   .wrapper {
     box-sizing: content-box;
@@ -101,7 +102,7 @@
     justify-content: center;
     flex-direction: column;
     width: 60%;
-    height: 65em;
+    height: 90%;
     background-color: #f0f0f0;
     align-self: center;
     top: 20%;

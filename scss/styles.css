@@ -236,6 +236,7 @@ a:visited {
 /* Footer */
 .footer {
   margin-top: auto;
+  z-index: 1;
 }
 
 .footer-div {
